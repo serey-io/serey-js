@@ -74,6 +74,8 @@ function makeConfig(options) {
     entry: {
       hive: path.join(options.baseDir, 'src/browser.js'),
       'hive-tests': path.join(options.baseDir, 'test/api.test.js'),
+      serey: path.join(options.baseDir, 'src/browser.js'),
+      'serey-tests': path.join(options.baseDir, 'test/api.test.js'),
     },
     output: {
       path: path.join(options.baseDir, 'dist'),
