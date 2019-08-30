@@ -106,10 +106,10 @@ Types.asset = {
         {
             // Legacy Case
             let b_copy = b.copy(b.offset, b.offset + 7)
-            symbol = new Buffer(b_copy.toBinary(), "binary").toString().replace(/\x00/g, "")
-            b.skip(7)
-            // "1.000 HIVE" always written with full precision
-            amount_string = fromImpliedDecimal(amount, precision)
+            let symbol = new Buffer(b_copy.toBinary(), "binary").toString().replace(/\x00/g, "")
+            b.skip(7);
+            // "1.000 SEREY" always written with full precision
+            let amount_string = fromImpliedDecimal(amount, precision)
         }
 
         return amount_string + " " + symbol
@@ -284,7 +284,7 @@ Types.asset_symbol = {
         return object
     },
     toObject(object, debug = {}){
-        if (debug.use_default && object === undefined) { return "STEEM"; }
+        if (debug.use_default && object === undefined) { return "SEREY"; }
         return object
     }
 }

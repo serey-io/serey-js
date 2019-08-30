@@ -346,6 +346,7 @@ let chain_properties = new Serializer(
     account_creation_fee: asset,
     maximum_block_size: uint32,
     hbd_interest_rate: uint16
+    maximum_block_size: uint32
 }
 );
 
@@ -468,6 +469,18 @@ let create_claimed_account = new Serializer(
     memo_key: public_key,
     json_metadata: string,
     extensions: set(future_extensions)
+let challenge_authority = new Serializer(
+    "challenge_authority", {
+    challenger: string,
+    challenged: string,
+    require_owner: bool
+}
+);
+
+let prove_authority = new Serializer(
+    "prove_authority", {
+    challenged: string,
+    require_owner: bool
 }
 );
 
@@ -995,6 +1008,8 @@ operation.st_operations = [
     limit_order_create2,
     claim_account,
     create_claimed_account,
+    challenge_authority,
+    prove_authority,
     request_account_recovery,
     recover_account,
     change_recovery_account,

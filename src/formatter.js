@@ -32,7 +32,7 @@ module.exports = hiveAPI => {
     const hiveOrders = !open_orders
       ? 0
       : open_orders.reduce((o, order) => {
-          if (order.sell_price.base.indexOf("HIVE") !== -1) {
+          if (order.sell_price.base.indexOf("SEREY") !== -1) {
             o += order.for_sale;
           }
           return o;
@@ -46,7 +46,7 @@ module.exports = hiveAPI => {
     let savings_hbd_pending = 0;
     savings_withdraws.forEach(withdraw => {
       const [amount, asset] = withdraw.amount.split(" ");
-      if (asset === "HIVE") savings_pending += parseFloat(amount);
+      if (asset === "SEREY") savings_pending += parseFloat(amount);
       else {
         if (asset === "HBD") savings_hbd_pending += parseFloat(amount);
       }
