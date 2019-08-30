@@ -1,13 +1,13 @@
 {
   "transport": "http",
-  "websocket": "wss://api.hive.blog:8090",
-  "uri": "https://api.hive.blog",
-  "url": "https://api.hive.blog",
+  "websocket": "wss://v2-api.serey.io",
+  "uri": "https://v2-api.serey.io",
+  "url": "https://v2-api.serey.io",
   "dev_uri": "",
   "stage_uri": "",
-  "address_prefix": "STM",
-  "chain_id": "beeab0de00000000000000000000000000000000000000000000000000000000",
-  "alternative_api_endpoints": ["https://api.hive.blog", "https://api.ha.deathwing.me"],
+  "address_prefix": "SRY",
+  "chain_id": "be8b2a0c6a52bf99f96040c7eb5dd418240175403496c5e400391c16af3a3887",
+  "alternative_api_endpoints": [],
   "failover_threshold": 3,
   "useAppbaseApi": true
 }
