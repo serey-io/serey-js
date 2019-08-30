@@ -1,7 +1,7 @@
 {
   "name": "serey",
   "version": "0.1.0",
-  "description": "sereyjs the JavaScript API for Steem blockchain",
+  "description": "sereyjs the JavaScript API for Serey blockchain",
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint --quiet src test; mocha -t 40000 --require babel-polyfill --require babel-register",
@@ -17,18 +17,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.syncad.com/hive/hive-js.git"
+    "url": "git+https://gitlab.com/blocksimple/serey-network/sereyjs.git"
   },
   "keywords": [
-    "hive",
-    "hiveblog",
-    "blockchain",
-    "hivejs"
+    "serey",
+    "sereyjs"
   ],
   "author": "Fabien (https://github.com/bonustrack)",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.syncad.com/hive/hive-js/issues"
+    "url": "https://gitlab.com/blocksimple/serey-network/sereyjs/issues"
   },
   "homepage": "https://gitlab.syncad.com/hive/hive-js#readme",
   "dependencies": {
