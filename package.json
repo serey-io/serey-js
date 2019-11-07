@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://gitlab.com/blocksimple/serey-network/sereyjs/issues"
   },
-  "homepage": "https://gitlab.syncad.com/hive/hive-js#readme",
+  "homepage": "https://gitlab.com/blocksimple/serey-network/sereyjs",
   "dependencies": {
     "@steemit/rpc-auth": "^1.1.1",
     "bigi": "^1.4.2",
