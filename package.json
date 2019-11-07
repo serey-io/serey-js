@@ -1,5 +1,5 @@
 {
-  "name": "serey",
+  "name": "@sereynetwork/sereyjs",
   "version": "0.1.0",
   "description": "sereyjs the JavaScript API for Serey blockchain",
   "main": "lib/index.js",
