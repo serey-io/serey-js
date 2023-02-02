@@ -106,10 +106,10 @@ Types.asset = {
         {
             // Legacy Case
             let b_copy = b.copy(b.offset, b.offset + 7)
-            let symbol = new Buffer(b_copy.toBinary(), "binary").toString().replace(/\x00/g, "")
+            symbol = new Buffer(b_copy.toBinary(), "binary").toString().replace(/\x00/g, "")
             b.skip(7);
             // "1.000 SEREY" always written with full precision
-            let amount_string = fromImpliedDecimal(amount, precision)
+            amount_string = fromImpliedDecimal(amount, precision)
         }
 
         return amount_string + " " + symbol

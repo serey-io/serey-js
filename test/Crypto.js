@@ -38,13 +38,13 @@ describe("steem.auth: derives", ()=> {
     assert.equal(nonce.toString('hex'), "462f6c19ece033b5a3dba09f1e1d7935a5302e4d1eac0a84489cdc8339233fbf")
     it("child from public", ()=> assert.equal(
         to_public.child(child).toString(),
-        "STM6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
+        "SRY6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
         "derive child public key"
     ))
     // child = hash.sha256( one_time_private.get_secret( to_public ))
     it("child from private", ()=> assert.equal(
         PrivateKey.fromSeed("alice-brain-key").child(child).toPublicKey().toString(),
-        "STM6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
+        "SRY6XA72XARQCain961PCJnXiKYdEMrndNGago2PV5bcUiVyzJ6iL",
         "derive child from private key"
     ))
     // "many keys" works, not really needed
