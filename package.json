@@ -6,6 +6,7 @@
   "scripts": {
     "test": "eslint --quiet src test; mocha -t 40000 --require babel-polyfill --require babel-register",
     "test-auth": "npm test -- --grep 'steem.auth'",
+    "test-roles": "npm test -- --grep 'steem.roles'",
     "build": "npm run build-browser && npm run build-node",
     "build-browser": "rm -rf dist && NODE_ENV=production node ./node_modules/webpack/bin/webpack.js && gzip -k -f ./dist/*.js && du -h ./dist/*",
     "build-node": "mkdir -p ./lib && cp -r ./src/* ./lib/ && babel ./src --out-dir ./lib",
@@ -43,6 +44,7 @@
     "cross-fetch": "^3.1.4",
     "debug": "^2.6.8",
     "detect-node": "^2.0.3",
+    "dotenv": "^16.0.3",
     "ecurve": "^1.0.5",
     "jsbi": "^3.1.4",
     "lodash": "^4.16.4",

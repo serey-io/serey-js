@@ -525,6 +525,51 @@ module.exports = [
   },
   {
     "roles": ["posting", "active", "owner"],
+    "operation": "role_create",
+    "params": [
+      "account",
+      "role_name",
+      "maintainers",
+      "allowed_operations",
+      "denied_operations",
+      "extensions",
+    ]
+  },
+  {
+    "roles": ["posting", "active", "owner"],
+    "operation": "role_delete",
+    "params": [
+      "account",
+      "role_name",
+      "extensions",
+    ]
+  },
+  {
+    "roles": ["posting", "active", "owner"],
+    "operation": "role_update",
+    "params": [
+      "account",
+      "role_name",
+      "new_role_name",
+      "new_maintainers",
+      "new_allowed_operations",
+      "new_denied_operations",
+      "extensions",
+    ]
+  },
+  {
+    "roles": ["posting", "active", "owner"],
+    "operation": "role_apply",
+    "params": [
+      "maintainer",
+      "account",
+      "role_to_grant",
+      "role_to_revoke",
+      "extensions",
+    ]
+  },
+  {
+    "roles": ["posting", "active", "owner"],
     "operation": "claim_reward_balance2",
     "params": [
       "account",

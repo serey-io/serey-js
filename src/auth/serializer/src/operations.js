@@ -970,80 +970,130 @@ let comment_benefactor_reward = new Serializer(
 }
 );
 
+
+const role_create = new Serializer(
+    "role_create",
+    {
+      account: string,
+      role_name: string,
+      maintainers: array(string),
+      allowed_operations: array(uint64),
+      denied_operations: array(uint64),
+      extensions: set(future_extensions)
+    }
+);
+
+const role_update = new Serializer(
+    "role_update",
+    {
+      account: string,
+      role_name: string,
+      new_role_name: optional(string),
+      new_maintainers: optional(array(string)),
+      new_allowed_operations: optional(array(uint64)),
+      new_denied_operations: optional(array(uint64)),
+      extensions: set(future_extensions)
+    }
+);
+
+const role_delete = new Serializer(
+    "role_delete",
+    {
+      account: string,
+      role_name: string,
+      extensions: set(future_extensions)
+    }
+);
+
+const role_apply = new Serializer(
+    "role_apply",
+    {
+      maintainer: string,
+      account: string,
+      role_to_grant: optional(string),
+      role_to_revoke: optional(string),
+      extensions: set(future_extensions)
+    }
+);
+
 operation.st_operations = [
-    vote,
-    comment,
-    transfer,
-    transfer_to_vesting,
-    withdraw_vesting,
-    limit_order_create,
-    limit_order_cancel,
-    feed_publish,
-    convert,
-    account_create,
-    account_update,
-    witness_update,
-    account_witness_vote,
-    account_witness_proxy,
-    pow,
-    custom,
-    report_over_production,
-    delete_comment,
-    custom_json,
-    comment_options,
-    set_withdraw_vesting_route,
-    limit_order_create2,
-    claim_account,
-    create_claimed_account,
-    request_account_recovery,
-    recover_account,
-    change_recovery_account,
-    escrow_transfer,
-    escrow_dispute,
-    escrow_release,
-    pow2,
-    escrow_approve,
-    transfer_to_savings,
-    transfer_from_savings,
-    cancel_transfer_from_savings,
-    custom_binary,
-    decline_voting_rights,
-    reset_account,
-    set_reset_account,
-    claim_reward_balance,
-    delegate_vesting_shares,
-    account_create_with_delegation,
-    witness_set_properties,
-    account_update2,
-    create_proposal,
-    update_proposal_votes,
-    remove_proposal,
-    update_proposal,
-    collateralized_convert,
-    recurrent_transfer,
-    claim_reward_balance2,
-    vote2,
-    smt_setup,
-    smt_setup_emissions,
-    smt_setup_ico_tier,
-    smt_set_setup_parameters,
-    smt_set_runtime_parameters,
-    smt_create,
-    smt_contribute,
-    fill_convert_request,
-    author_reward,
-    curation_reward,
-    comment_reward,
-    liquidity_reward,
-    interest,
-    fill_vesting_withdraw,
-    fill_order,
-    shutdown_witness,
-    fill_transfer_from_savings,
-    hardfork,
-    comment_payout_update,
-    return_vesting_delegation,
-    comment_benefactor_reward
+    vote, // 0
+    comment, // 1
+    transfer,  // 2
+    transfer_to_vesting, // 3
+    withdraw_vesting, // 4
+    limit_order_create, // 5
+    limit_order_cancel, // 6
+    feed_publish, // 7
+    convert, // 8
+    account_create, // 9
+    account_update, // 10
+    witness_update, // 11
+    account_witness_vote, // 12
+    account_witness_proxy, // 13
+    pow, // 14
+    custom, // 15
+    report_over_production, // 16
+    delete_comment, // 17
+    custom_json, // 18
+    comment_options, // 19
+    set_withdraw_vesting_route, // 20
+    limit_order_create2, // 21
+    claim_account, // 22
+    create_claimed_account, // 23
+    request_account_recovery, // 24
+    recover_account, // 25
+    change_recovery_account, // 26
+    escrow_transfer, // 27
+    escrow_dispute, // 28
+    escrow_release, // 29
+    pow2, // 30
+    escrow_approve, // 31
+    transfer_to_savings, // 32
+    transfer_from_savings, // 33
+    cancel_transfer_from_savings, // 34
+    custom_binary, // 35
+    decline_voting_rights, // 36
+    reset_account, // 37
+    set_reset_account, // 38
+    claim_reward_balance, // 39
+    delegate_vesting_shares, // 40
+    account_create_with_delegation, // 41
+    witness_set_properties, // 42
+    account_update2, // 43
+    create_proposal, // 44
+    update_proposal_votes, // 45
+    remove_proposal, // 46
+    update_proposal, // 47
+    collateralized_convert, // 48
+    recurrent_transfer, // 49
+    role_create,
+    role_update,
+    role_delete,
+    role_apply,
+    claim_reward_balance2, // 50
+    vote2, // 51
+    smt_setup, // 52
+    smt_setup_emissions, // 53
+    smt_setup_ico_tier, // 54
+    smt_set_setup_parameters, // 55
+    smt_set_runtime_parameters, // 56
+    smt_create, // 57
+    smt_contribute, // 58
+    fill_convert_request, // 59
+    author_reward, // 60
+    curation_reward, // 61
+    comment_reward, // 62
+    liquidity_reward, // 63
+    interest, // 64
+    fill_vesting_withdraw, // 65
+    fill_order, // 66
+    shutdown_witness, // 67
+    fill_transfer_from_savings, // 68
+    hardfork, // 69
+    comment_payout_update, // 70
+    return_vesting_delegation, // 71
+    comment_benefactor_reward // 72
 ];
 
 let transaction = new Serializer(
