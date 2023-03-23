@@ -10,7 +10,9 @@
     "build": "npm run build-browser && npm run build-node",
     "build-browser": "rm -rf dist && NODE_ENV=production node ./node_modules/webpack/bin/webpack.js && gzip -k -f ./dist/*.js && du -h ./dist/*",
     "build-node": "mkdir -p ./lib && cp -r ./src/* ./lib/ && babel ./src --out-dir ./lib",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "roles-create": "npx babel-node roles-setup.js create",
+    "roles-destroy": "npx babel-node roles-setup.js destroy"
   },
   "browser": {
     "ws": false,
@@ -31,6 +33,7 @@
   },
   "homepage": "https://gitlab.com/blocksimple/serey-network/sereyjs",
   "dependencies": {
+    "@babel/node": "^7.20.7",
     "@steemit/rpc-auth": "^1.1.1",
     "bigi": "^1.4.2",
     "bluebird": "^3.4.6",

@@ -1067,33 +1067,33 @@ operation.st_operations = [
     update_proposal, // 47
     collateralized_convert, // 48
     recurrent_transfer, // 49
-    role_create,
-    role_update,
-    role_delete,
-    role_apply,
-    claim_reward_balance2, // 50
-    vote2, // 51
-    smt_setup, // 52
-    smt_setup_emissions, // 53
-    smt_setup_ico_tier, // 54
-    smt_set_setup_parameters, // 55
-    smt_set_runtime_parameters, // 56
-    smt_create, // 57
-    smt_contribute, // 58
-    fill_convert_request, // 59
-    author_reward, // 60
-    curation_reward, // 61
-    comment_reward, // 62
-    liquidity_reward, // 63
-    interest, // 64
-    fill_vesting_withdraw, // 65
-    fill_order, // 66
-    shutdown_witness, // 67
-    fill_transfer_from_savings, // 68
-    hardfork, // 69
-    comment_payout_update, // 70
-    return_vesting_delegation, // 71
-    comment_benefactor_reward // 72
+    role_create, // 50
+    role_update, // 51
+    role_delete, // 52
+    role_apply, // 53
+    claim_reward_balance2,
+    vote2,
+    smt_setup,
+    smt_setup_emissions,
+    smt_setup_ico_tier,
+    smt_set_setup_parameters,
+    smt_set_runtime_parameters,
+    smt_create,
+    smt_contribute,
+    fill_convert_request,
+    author_reward,
+    curation_reward,
+    comment_reward,
+    liquidity_reward,
+    interest,
+    fill_vesting_withdraw,
+    fill_order,
+    shutdown_witness,
+    fill_transfer_from_savings,
+    hardfork,
+    comment_payout_update,
+    return_vesting_delegation,
+    comment_benefactor_reward
 ];
 
 let transaction = new Serializer(

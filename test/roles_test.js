@@ -14,8 +14,9 @@ describe("steem.roles: Testing roles operations", async () => {
 
   const TEST_ROLE_NAME = process.env.ROLE_TEST_NAME;
 
-  const acc1 = process.env.ROLE_MAINTAINER_ACCOUNT;
-  const pass1 = process.env.ROLE_MAINTAINER_PASSWORD;
+  const acc1 = process.env.ROLE_CREATOR_ACCOUNT;
+  const pass1 = process.env.ROLE_CREATOR_PASSWORD;
+
 
   const acc2 = process.env.ROLE_TEST_ACCOUNT;
 
