@@ -148,7 +148,8 @@ module.exports = [
     "params": [
       "account",
       "witness",
-      "approve"
+      "approve",
+      "weight",
     ]
   },
   {

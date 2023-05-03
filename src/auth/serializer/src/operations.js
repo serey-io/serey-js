@@ -363,7 +363,8 @@ let account_witness_vote = new Serializer(
     "account_witness_vote", {
     account: string,
     witness: string,
-    approve: bool
+    approve: bool,
+    weight: uint16,
 }
 );
 
