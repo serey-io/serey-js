@@ -132,7 +132,7 @@ Types.asset = {
           {
             case "@@000000021":
               precision = 3
-              symbol = config.get( "address_prefix" ) == "STM" ? "STEEM" : "TESTS"
+              symbol = config.get( "address_prefix" ) == "STM" ? "SRY" : "TESTS"
               break
             case "@@000000013":
               precision = 3
@@ -156,9 +156,6 @@ Types.asset = {
             let res = object.split(" ")
             amount = res[0]
             symbol = res[1]
-
-            // Hive workaround for now
-            symbol = symbol == "HIVE" ? "STEEM" : symbol == "HBD" ? "SBD" : symbol
 
             if(symbol.startsWith("@@"))
             {
@@ -222,7 +219,7 @@ Types.asset_symbol = {
             // Legacy Case
             let b_copy = b.copy(b.offset, b.offset + 7)
             let symbol = new Buffer(b_copy.toBinary(), "binary").toString().replace(/\x00/g, "")
-            if(symbol == "STEEM" || symbol == "TESTS")
+            if(symbol == "STEEM" || symbol == "TESTS" || symbol == "SRY")
               nai_string = "@@000000021"
             else if(symbol == "SBD" || symbol == "TBD")
               nai_string = "@@000000013"
@@ -252,7 +249,7 @@ Types.asset_symbol = {
         {
           case "@@000000021":
             precision = 3
-              symbol = config.get( "address_prefix" ) == "STM" ? "STEEM" : "TESTS"
+            symbol = config.get( "address_prefix" ) == "STM" ? "SRY" : "TESTS"
             break
           case "@@000000013":
             precision = 3
